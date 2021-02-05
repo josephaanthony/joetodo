@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 
 import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
-import { MessageComponentModule } from '../message/message.module';
 import { TodosModule } from '../components/todos/todos.module';
 
 @NgModule({
@@ -13,7 +12,6 @@ import { TodosModule } from '../components/todos/todos.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    MessageComponentModule,
     TodosModule,
     HomePageRoutingModule
   ],

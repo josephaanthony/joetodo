@@ -1,19 +1,10 @@
 <p>
-  <!-- <app-todo-item *ngFor="let todoItem of todos" [todoItem]="todoItem"></app-todo-item> -->
   <ion-item *ngFor="let todoItem of todos" [routerLink]="'/todo-item/' + todoItem.id" [detail]="false">
-    <div slot="start" [class]="!todoItem.read ? 'dot dot-unread' : 'dot'"></div>
     <ion-label class="ion-text-wrap">
       <h2>
-        {{ todoItem.header }}
-        <span class="date">
-          <ion-note>{{ todoItem.date }}</ion-note>
-          <ion-icon name="chevron-forward" size="small" *ngIf="isIos()"></ion-icon>
-        </span>
+        {{ todoItem.message }}
       </h2>
-      <h3>{{ todoItem.targetDate }}</h3>
-      <p>
-        {{todoItem.message}}
-      </p>
+      <h3>{{ momentjs(todoItem.targetDate).format("MM/DD/YYYY") }}</h3>
     </ion-label>
   </ion-item>
 </p>

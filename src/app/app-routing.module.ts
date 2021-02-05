@@ -11,10 +11,6 @@ const routes: Routes = [
     loadChildren: () => import('./components/todo-item/todo-item.module').then( m => m.TodoItemModule)
   },
   {
-    path: 'message/:id',
-    loadChildren: () => import('./view-message/view-message.module').then( m => m.ViewMessagePageModule)
-  },
-  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
